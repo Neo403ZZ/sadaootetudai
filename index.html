@@ -256,6 +256,54 @@
             font-weight: bold;
             line-height: 1.6;
         }
+        /* ==========================================
+   スマホ・タブレット向けレスポンシブ対応
+   ========================================== */
+@media screen and (max-width: 768px) {
+    /* 1. レイアウトを上下並びに変更 */
+    body {
+        flex-direction: column;
+    }
+
+    /* 2. メニューを上部固定・コンパクト化 */
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative; /* 固定を解除して画面上部に配置 */
+        padding: 15px 10px;
+        border-right: none;
+        border-bottom: 2px solid #e6dcc8;
+    }
+
+    aside h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    /* インデント（ずらし）を小さくして横幅を確保 */
+    aside li.sub-menu {
+        margin-left: 8px;
+    }
+    aside li.deep-sub-menu {
+        margin-left: 15px;
+    }
+    aside li.menu-spacer {
+        margin-bottom: 12px;
+    }
+
+    aside button {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* 3. メインコンテンツの余白を調整して広く表示 */
+    main {
+        margin-left: 0; /* 左余白を解除 */
+        padding: 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
     </style>
 </head>
 <body>
