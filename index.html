@@ -304,6 +304,53 @@
         box-sizing: border-box;
     }
 }
+    /* 定生の写真の設定 */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff9f3;
+    border: 2px solid #e6dcc8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* 丸く切り抜く */
+    object-fit: cover;
+    border: 3px solid #d35400;
+    flex-shrink: 0;
+}
+
+.profile-info h3 {
+    margin: 0 0 5px 0;
+    color: #d35400;
+    font-size: 1.4rem;
+}
+
+.profile-info .title {
+    font-size: 0.95rem;
+    color: #8c6d58;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* スマホ表示対応（画面が狭いときは縦並び） */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}    
     </style>
 </head>
 <body>
